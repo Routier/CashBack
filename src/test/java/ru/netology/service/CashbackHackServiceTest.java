@@ -2,25 +2,25 @@ package ru.netology.service;
 
 public class CashbackHackServiceTest {
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void testZeroToTheBonus() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
-        org.testng.Assert.assertEquals(service.remain(amount), 0);
+        org.junit.Assert.assertEquals(0, service.remain(amount));
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void testMiddleHitToTheBonus() {
         CashbackHackService service = new CashbackHackService();
         int amount = 500;
-        org.testng.Assert.assertEquals(service.remain(amount), 500);
+        org.junit.Assert.assertEquals(500, service.remain(amount));
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void testFullToGo() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
-        org.testng.Assert.assertEquals(service.remain(amount), 1000);
+        org.junit.Assert.assertEquals(1000, service.remain(amount));
     }
 
 
